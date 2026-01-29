@@ -1,542 +1,337 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Welcome to ALTSETING — the next-gen meme token with mining, NFT and gamification. Join the revolution.">
-  <meta name="keywords" content="ALTSETING, ALTST, crypto, token, miner, NFT, Web3, blockchain">
-  <meta property="og:title" content="ALTSETING Token — The Future of Crypto Fun">
-  <meta property="og:description" content="ALTSETING is your portal to Web3. Earn, mine and play with ALTST coins.">
-  <meta property="og:image" content="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap">
-  <meta name="author" content="ALTSETING Team">
-  <title>ALTSETING Token ($ALTST)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <link rel="icon" href="logo.jpg" type="image/jpeg">
-  <style>
-    .wallet-button {
-  background: linear-gradient(135deg, #00ffcc, #0099ff);
-  border: none;
-  color: #000;
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #00ffffaa;
-  cursor: pointer;
-  transition: 0.3s ease;
-  text-transform: uppercase;
-  font-family: 'Orbitron', sans-serif;
-}
 
-.wallet-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px #00ffffcc, 0 0 10px #0099ffaa;
-}
+  <title>ALTSETING Token - ($ALTST)</title>
+  <link rel="stylesheet" href="main.css" />
+<script>
+    (function () {
+    // якщо вже на mobile.html — нічого не робимо
+        if (location.pathname.endsWith("m/mobile.html")) return;
 
-.wallet-button:active {
-  transform: scale(0.97);
-}
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        if (isMobile) location.replace("m/mobile.html");
+    })();
+</script>
+  <!-- ================= ALTSETING SEO / AVATAR / PREVIEW ================= -->
+  <meta name="description" content="ALTSETING Token (ALTST) — Web3 ecosystem, crypto payments, cashback for real business, SETWALLET & ALTSETING Chain.">
+  <meta name="theme-color" content="#ff7a00">
 
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      color: #fff;
-    }
-    #preloader {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    #preloader img {
-      width: 100px;
-      animation: spin 2s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    header {
-      background: #111;
-      padding: 30px 20px;
-      text-align: center;
-      animation: fadeIn 1.5s ease forwards;
-    }
-    header img {
-      width: 120px;
-      margin-bottom: 15px;
-      animation: fadeIn 1.5s ease forwards;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      color: #00ffc6;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-    nav {
-      text-align: center;
-      margin: 20px 0;
-    }
-    nav a {
-      color: #00ffc6;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      transform: scale(1.1);
-      text-shadow: 0 0 10px #00ffc6;
-    }
-    .lang-switcher {
-      text-align: center;
-      margin: 10px;
-    }
-    .lang-switcher button {
-      background: transparent;
-      border: 1px solid #00ffc6;
-      color: #00ffc6;
-      margin: 0 5px;
-      padding: 5px 10px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .lang-switcher button:hover {
-      background: #00ffc6;
-      color: #000;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px;
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 255, 198, 0.4);
-    }
-    h2 { color: #00ffc6; }
-    .cta {
-      display: inline-block;
-      background: #00ffc6;
-      color: #000;
-      padding: 12px 30px;
-      margin-top: 20px;
-      border-radius: 10px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.3s;
-    }
-    .cta:hover {
-      background: #00e6b8;
-      transform: scale(1.05);
-    }
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-    .nft-gallery {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-    .nft-gallery img {
-      width: 150px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ffc6;
-      transition: transform 0.3s ease;
-    }
-    .nft-gallery img:hover {
-      transform: scale(1.1);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  <link rel="icon" href="/imeges/seo/favicon-32x32.png" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/imeges/seo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/imeges/seo/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="/imeges/seo/apple-touch-icon.png">
 
-   
-  </style>
+  <meta property="og:title" content="ALTSETING Token (ALTST)">
+  <meta property="og:description" content="ALTSETING — one crypto ecosystem for payments, cashback & Web3 business integration.">
+  <meta property="og:image" content="https://new-web-puce.vercel.app/imeges/seo/og-image.png">
+  <meta property="og:url" content="https://new-web-puce.vercel.app">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ALTSETING Token (ALTST)">
+  <meta name="twitter:description" content="ALTSETING — Web3 crypto ecosystem for real business & payments.">
+  <meta name="twitter:image" content="https://new-web-puce.vercel.app/imeges/seo/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ALTSETING Token",
+    "url": "https://new-web-puce.vercel.app",
+    "logo": "https://new-web-puce.vercel.app/imeges/seo/favicon-192x192.png",
+    "sameAs": [
+      "https://twitter.com/altseting",
+      "https://t.me/altseting"
+    ]
+  }
+  </script>
+  <!-- ================= END ALTSETING ================= -->
 </head>
+
 <body>
-  <div id="preloader">
-    <img src="logo.jpg" alt="Loading..." />
-  </div>
+<header class="top">
+    <div class="top-left">
+        <img src="imeges/logo3.png" alt="ALTSETING logo" class="logo">
+        <span class="title">ALTSETING Token</span>
+    </div>
 
-  <header>
-    <img src="logo.jpg" alt="ALTSETING Logo">
-    <h1>ALTSETING Token ($ALTST)</h1>
-    <p id="subtitle">Мем-токен з реальним майбутнім</p>
-  </header>
-  
-  <nav>
-  <a href="#about">About us</a>
-  <a href="#nfts">NFT</a>
-  <a href="#" onclick="openWhitelist()">📝 Whitelist</a>
-</nav>
+    <nav class="top-nav">
+        <a href="#goals" class="nav-link">Project Goals</a>
+        <a href="#partner" class="nav-link">Become a Partner</a>
+        <a href="#academy" class="nav-link">Rabbit IT </a>
+        <a href="#wallet" class="nav-link">SetWallet</a>
+        <a href="#Coming soon" class="nav-link">Coming soon</a>
+        <a href="#NFT" class="nav-link">NFT</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+</header>
 
-  <div class="lang-switcher">
-    <button onclick="setLang('uk')">Українська</button>
-    <button onclick="setLang('en')">English</button>
-    <button onclick="setLang('pl')">Polski</button>
-    <button onclick="setLang('ru')">Русский</button>
-  </div>
-  
-<section id="wallet" style="padding: 40px; text-align: center;">
-  <h2>🎒 ALTSETING Wallet</h2>
-  <button onclick="createWallet()"</button>
-  <div id="walletInfo" style="margin-top: 20px; display:none;">
-  <p><strong>Ваша адреса:</strong></p>
-  <p id="walletAddress" style="word-break: break-all;"></p>
-  <button onclick="copyAddress()" class="wallet-button">📋 Copy address</button>
-</div>
 
-<button class="wallet-button" onclick="createWallet()">🚀 Create wallet</button>
-</section>
-  
-  <section>
-    <h2 id="about-title">Про ALTSETING</h2>
-    <p id="about-text">ALTSETING Token — це не просто ще один мем-токен. Це революційний проєкт, який поєднує гейміфікацію, NFT, Telegram-бота та криптовалюту в єдину екосистему. З нашою командою ви отримаєте новий досвід у світі Web3.</p>
 
-    <h2 id="why-title">Чому саме ALTSETING?</h2>
-    <ul id="features">
-      <li>🎮 Гейміфікований майнінг прямо у Telegram</li>
-      <li>🌐 Повна екосистема з WebApp, NFT та гаманцем</li>
-      <li>🚀 Справжнє комʼюніті, побудоване на взаємодії</li>
-      <li>💸 Винагороди за рефералів і активність</li>
-    </ul>
 
-    <a href="https://t.me/ALTsetingtoken" class="cta" target="_blank" id="cta-button">Приєднатись до руху</a>
-  </section>
 
-  <section id="nfts">
-    <h2>NFT-Collection</h2>
-    <div class="nft-gallery">
-      <img src="nft1.jpg" alt="NFT 1" />
-      <img src="nft2.jpg" alt="NFT 2" />
-      <img src="nft3.jpg" alt="NFT 3" />
+  <section class="scheme">
+    <div class="scheme-wrap">
+
+      <svg class="scheme-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="50" y1="45" x2="20" y2="22" />
+        <line x1="50" y1="45" x2="80" y2="22" />
+        <line x1="50" y1="45" x2="16" y2="54" />
+        <line x1="50" y1="45" x2="84" y2="54" />
+        <line x1="50" y1="45" x2="28" y2="82" />
+        <line x1="50" y1="45" x2="72" y2="82" />
+      </svg>
+
+      <div class="scheme-center">
+        <div class="logo-video">
+          <video
+            class="logo-video__el"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="imeges/blacklogo.jpg"
+          >
+            <source src="imeges/animlogo.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <h1 class="scheme-title">ALTSETING</h1>
+        <p class="scheme-sub">Ecosystem • Wallet • Payments • Community</p>
+      </div>
+
+      <div class="node" style="--x:14%; --y:18%;">
+        <img class="node-icon" src="imeges/imgcommunity.png" alt="">
+        <div class="node-text">Community</div>
+      </div>
+
+      <div class="node" style="--x:86%; --y:18%;">
+        <img class="node-icon" src="imeges/imgbusiness.png" alt="">
+        <div class="node-text">Business</div>
+      </div>
+
+      <div class="node" style="--x:12%; --y:52%;">
+        <img class="node-icon" src="imeges/imgaltpay.png" alt="">
+        <div class="node-text">ALT Pay</div>
+      </div>
+
+      <div class="node" style="--x:88%; --y:52%;">
+        <img class="node-icon" src="imeges/imgairdrop.png" alt="">
+        <div class="node-text">Airdrop</div>
+      </div>
+
+      <div class="node" style="--x:26%; --y:88%;">
+        <img class="node-icon" src="imeges/imgnft.png" alt="">
+        <div class="node-text">NFT</div>
+      </div>
+
+      <div class="node" style="--x:74%; --y:88%;">
+        <img class="node-icon" src="imeges/imgsetwallet.png" alt="">
+        <div class="node-text">SetWallet</div>
+      </div>
+
     </div>
   </section>
 
-  <section id="altst-nft" style="padding: 50px; text-align: center; background: linear-gradient(to right, #1e1e2f, #2e2e4f); color: white;">
-  <h2 style="font-size: 36px; margin-bottom: 20px;" id="nft-title">🚀 ALTSETING NFT — більше ніж токен</h2>
-  <p style="font-size: 18px; max-width: 800px; margin: auto;" id="nft-description">
-    ALTSETING NFT — це твій ключ до майбутнього. Отримай <b>бонуси в Telegram-боті</b>, <b>знижки на фарм ALT</b>, <b>ексклюзивні права</b> в комʼюніті.
-  </p>
+  <h2 class="hero-title">
+    An ecosystem built around the ALTST token with real utility and a long-term future.
+  </h2>
 
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
-    <a href="https://x.com/altseting?s=21" target="_blank" style="padding: 12px 24px; background-color: #1DA1F2; color: white; border-radius: 8px; text-decoration: none; font-weight: bold;">🐦 Twitter</a>
-    <a href="https://discord.gg/DKXXzjF7" target="_blank" style="padding: 12px 24px; background-color: #5865F2; color: white; border-radius: 8px; text-decoration: none; font-weight: bold;">💬 Discord</a>
-    <a href="https://pump.fun/AsJmSvxB8aP5GMjtzqo6KzRXQ4z8rv2r4oB87gUDpump" target="_blank" style="padding: 12px 24px; background-color: #ff007a; color: white; border-radius: 8px; text-decoration: none; font-weight: bold;">📈 Pump.fun</a>
+  <section id="goals"></section>
+  <section class="cover">
+    <div class="cover-content">
+      <h2>Core Objectives of the ALTSETING Project</h2>
+      <ul>
+        <li>Build a recognizable crypto brand based on the token, with the subsequent launch of the ALTST coin</li>
+        <li>ALT Pay concept (service payments / QR payments, collaborations with businesses)</li>
+        <li>NFT ecosystem — collections, utilities, access rights, ecosystem gamification</li>
+        <li>Listings and scaling: launch → community → exchanges → growth</li>
+        <li>Integration into everyday life — daily payments, services, ease of use on par with traditional currencies</li>
+        <li>Cashback system for payments in ALTST</li>
+        <li>ALTSETING Wallet — secure storage, asset management, and the core hub of the ecosystem</li>
+        <li>ALTSETING Miner Bot — user acquisition and rewards through activity, gamification, and in-ecosystem farming</li>
+        <li>Launch of a proprietary blockchain — scalability, independence, and full control over the ecosystem</li>
+      </ul>
+    </div>
+  </section>
+
+  <h5 class="line-sep">.</h5>
+
+  <section class="partner-cta">
+    <div class="partner-cta-inner">
+      <div class="partner-cta-text">
+        <h2>
+          Grow your business with
+          <span>ALTSETING</span>
+        </h2>
+
+        <p>
+          Crypto cashback, QR payments and access to a global ecosystem.
+          One integration — unlimited growth.
+        </p>
+
+        <a href="partner/partner.html" class="partner-btn">
+          <h3 class="Become-text">Become a Partner</h3>
+          <i class="arrow"></i>
+        </a>
+      </div>
+
+      <div class="partner-cta-visual">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+
+        <div class="core">
+          <div class="core-inner">ALTST</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h5 class="line-sep">.</h5>
+
+  <section id="academy"></section>
+  <div class="hero-section">
+    <div class="hero-left">
+      <h1>Programming School by the Creators of the ALTSETING Project</h1>
+      <p>
+        Rabbit Academy is a modern programming school (Rabbit IT) offering online and offline courses for children,
+        teenagers, and adults. The learning process is practice-oriented: students build real projects, websites,
+        games, and bots under the guidance of mentors. The courses cover HTML, CSS, JavaScript, and Python,
+        making them suitable for beginners as well as for those who want to develop their IT skills and achieve practical results.
+      </p>
+
+      <a href="https://www.rabbit.academy/" target="_blank" class="rabbit-btn">
+        <img src="imeges/rabit2.png" alt="Rabbit IT">
+        <span>Rabbit Academy</span>
+      </a>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-rabbit-orbit">
+        <div class="rabbit-core">
+          <span class="rabbit-face"></span>
+          <span class="rabbit-ear ear-left"></span>
+          <span class="rabbit-ear ear-right"></span>
+        </div>
+
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
+      </div>
+
+      <div class="hero-tag hero-tag-top">
+        <span>FIRST LESSON</span>
+        <strong>FREE</strong>
+      </div>
+
+      <div class="hero-tag hero-tag-bottom">
+        <span>RABBIT IT</span>
+        <strong>Sign up in 1 minute</strong>
+      </div>
+    </div>
   </div>
 
-  <p style="font-size: 16px; margin-top: 40px; opacity: 0.8;" id="nft-note">
-    Колекціонування ще ніколи не було таким прибутковим. ALTSETING — це не просто NFT, це доступ до екосистеми майбутнього!
+  <h5 class="line-sep">.</h5>
+
+  <section id="wallet"></section>
+  <section class="wallet-section">
+    <div class="wallet-content">
+      <div class="wallet-text">
+        <h1>SetWallet</h1>
+
+        <p class="subtitle">
+          Your browser wallet. Full control over crypto assets without third-party services.
+        </p>
+
+        <a href="https://setwallet.vercel.app/" target="_blank" class="wallet-btn">Create Wallet</a>
+
+        <p class="description-setwallet">
+          SetWallet is the core crypto wallet of the ALTSETING project, ensuring full control over assets and a maximum level of security.
+          The wallet is designed for fast and convenient interaction with crypto assets. At this stage, users can securely store ALTSETING
+          cryptocurrency received through the cashback system and airdrops.
+        </p>
+      </div>
+
+      <div class="wallet-image">
+        <img src="imeges/phone5.png" alt="SetWallet app">
+      </div>
+    </div>
+  </section>
+
+  <h5 class="line-sep">.</h5>
+
+  <section id="coming-soon"></section>
+  <section class="miner-bot">
+    <div class="text-bot">
+      <h2 class="soon">Coming soon!</h2>
+      <p class="info-miner">
+        MinerBot Altseting is a Telegram Web App that offers a gamified way to earn ALTs through interactive digital activities.
+        Fully integrated into Telegram, it lets users play mini-games and use tap-based mechanics without installing external apps.
+        Earned ALTs can be converted into the ALTST token, creating a clear and transparent path from user engagement to real value within the Altseting ecosystem.
+      </p>
+      <h2 class="name-miner">MinerBot</h2>
+    </div>
+
+    <div class="miner-image">
+      <img src="imeges/miner.png" alt="minerBot">
+    </div>
+  </section>
+
+  <section class="blockchain">
+    <div class="T-blockchain">
+      <p>
+        ALTSETING aims to develop its own blockchain as the core infrastructure and heart of the ecosystem.
+        It will support gamified interactions, digital assets, and scalable token economies. ALTST will act as the native token powering transactions,
+        rewards, and ecosystem services. Users and projects will be able to launch their own tokens on the ALTSETING blockchain, enabling independent economies and communities.
+        The network will focus on accessibility, low entry barriers, and seamless integration with everyday digital platforms to drive real-world adoption of decentralized systems.
+      </p>
+      <h2 class="name-blockchain">Blockchain</h2>
+    </div>
+
+    <div class="chain-image">
+      <img src="imeges/block3.png" alt="blockchain">
+    </div>
+  </section>
+
+  <h5 class="line-sep">.</h5>
+
+  <section id="nft"></section>
+  <div class="gallery">
+    <div class="card"><img src="imeges/Luna2.png" alt="Luna"></div>
+    <div class="card"><img src="imeges/Seti nft.png" alt="seti"></div>
+    <div class="card"><img src="imeges/Meta.png" alt="meta"></div>
+  </div>
+
+  <p class="mame">LUNA SETI META</p>
+  <p class="uniknft">
+    Unique NFT characters — part of the ALTSETING (ALTST) ecosystem.
+    Early NFT value: limited supply and priority access to future project opportunities.
   </p>
-</section>
 
+  <section id="contact"></section>
+  <div class="footer-wrap">
+    <div class="socials-bar">
+      <span class="socials-text">Social Media</span>
 
-  <footer>
-    &copy; 2025 ALTSETING Token. All rights reserved.
-  </footer>
-  
-<script>
-function openWhitelist() {
-  const whitelistContent = {
-    en: {
-      title: "📝 ALTSETING Whitelist",
-      intro: "ALTSETING Token is a next-generation crypto project. Our goal is to combine gamification, Web3, NFTs, a Telegram bot, and our own cryptocurrency into one ecosystem.",
-      description: "Whitelist is a list of users who will be the first to get access to exclusive opportunities: sale, NFTs, DAO.",
-      note: "This is the structure of the ALTSETING ($ALTST) token used by exchanges, wallets and DeFi services.",
-      tags: `🔹 Name and logo<br>
-🔹 Network (Solana)<br>
-🔹 Contract address<br>
-🔹 Tags (meme-token, community-token)<br>
-🔹 Links to site, Twitter, Telegram, and Discord<br>
-🔹 Description to show ALTSETING is a real Web3 movement 🚀`
-    },
-    uk: {
-      title: "📝 ALTSETING Whitelist",
-      intro: "ALTSETING Token — це криптопроєкт нового покоління. Наша мета — поєднати гейміфікацію, Web3, NFT, Telegram-бота та власну криптовалюту в одну екосистему.",
-      description: "Whitelist — це список користувачів, які першими отримають доступ до закритих можливостей: сейл, NFT, DAO.",
-      note: "Це структура токена ALTSETING ($ALTST), яку можуть використовувати біржі, гаманці та децентралізовані сервіси.",
-      tags: `🔹 Назва і лого<br>
-🔹 Мережа (Solana)<br>
-🔹 Адреса контракту<br>
-🔹 Теги (meme-token, community-token)<br>
-🔹 Посилання на сайт, Twitter, Telegram і Discord<br>
-🔹 Опис проєкту, щоб усі знали, що ALTSETING — це не просто токен, а справжній Web3-рух 🚀`
-    },
-    pl: {
-      title: "📝 ALTSETING Whitelist",
-      intro: "ALTSETING Token to projekt kryptowalutowy nowej generacji. Naszym celem jest połączenie gamifikacji, Web3, NFT, bota Telegram oraz naszej kryptowaluty w jeden ekosystem.",
-      description: "Whitelist to lista użytkowników, którzy jako pierwsi uzyskają dostęp do ekskluzywnych możliwości: sprzedaży, NFT, DAO.",
-      note: "To struktura tokena ALTSETING ($ALTST), którą mogą wykorzystać giełdy, portfele i usługi DeFi.",
-      tags: `🔹 Nazwa i logo<br>
-🔹 Sieć (Solana)<br>
-🔹 Adres kontraktu<br>
-🔹 Tagi (meme-token, community-token)<br>
-🔹 Linki do strony, Twittera, Telegrama i Discorda<br>
-🔹 Opis projektu pokazujący, że ALTSETING to prawdziwy ruch Web3 🚀`
-    },
-    ru: {
-      title: "📝 ALTSETING Whitelist",
-      intro: "ALTSETING Token — это криптопроект нового поколения. Наша цель — объединить геймификацию, Web3, NFT, Telegram-бота и собственную криптовалюту в одну экосистему.",
-      description: "Whitelist — список пользователей, которые первыми получат доступ к закрытым возможностям: сейл, NFT, DAO.",
-      note: "Это структура токена ALTSETING ($ALTST), которую могут использовать биржи, кошельки и DeFi-сервисы.",
-      tags: `🔹 Название и логотип<br>
-🔹 Сеть (Solana)<br>
-🔹 Адрес контракта<br>
-🔹 Теги (meme-token, community-token)<br>
-🔹 Ссылки на сайт, Twitter, Telegram и Discord<br>
-🔹 Описание проекта, чтобы все знали, что ALTSETING — это не просто токен, а настоящий Web3-движ 🚀`
-    }
-  };
+      <div class="socials-links">
+        <a href="tg://resolve?domain=ALTsetingtoken" target="_blank" class="social-btn tg">Telegram</a>
+        <a href="https://www.instagram.com/altseting/" target="_blank" class="social-btn ig">Instagram</a>
+        <a href="https://x.com/ALTSETING" target="_blank" class="social-btn x">X</a>
+      </div>
+    </div>
 
-  let lang = prompt("Choose language: en / uk / pl / ru", "en");
-  if (!lang || !whitelistContent[lang]) lang = "en";
-  const t = whitelistContent[lang];
+    <div class="Docs">
+      <span class="Docs-text">Project Docs</span>
+      <a class="whitepaper-link" href="whitepaper.html" target="_blank">Whitepaper</a>
+    </div>
+  </div>
 
-  const newWin = window.open("", "_blank");
-  newWin.document.write(`
-    <html>
-    <head>
-      <title>ALTSETING Whitelist</title>
-      <style>
-        body {
-          font-family: Orbitron, sans-serif;
-          background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-          color: #fff;
-          padding: 40px;
-          text-align: center;
-        }
-        h1 { color: #00ffc6; font-size: 2.5rem; }
-        p { max-width: 800px; margin: 20px auto; font-size: 1.2rem; line-height: 1.6; }
-        pre {
-          background: #111;
-          color: #00ffc6;
-          text-align: left;
-          padding: 20px;
-          border-radius: 10px;
-          overflow-x: auto;
-          font-size: 0.9rem;
-          max-width: 90%;
-          margin: 20px auto;
-        }
-      </style>
-    </head>
-    <body>
-      <h1>${t.title}</h1>
-      <p>${t.intro}</p>
-      <p>${t.description}</p>
-      <p>${t.note}</p>
-      <pre>{
-  "name": "ALTSETING Token List",
-  "logoURI": "logo.jpg",
-  "tags": {
-    "meme-token": {
-      "name": "meme-token",
-      "description": "Tokens created for community & fun"
-    },
-    "community-token": {
-      "name": "community-token",
-      "description": "Tokens that represent community-driven projects"
-    }
-  },
-  "timestamp": "2025-05-21T00:00:00+00:00",
-  "tokens": [
-    {
-      "chainId": 101,
-      "address": "8d4UWpvqkJTkGq19KhKwZxSujqENVRfg4UJze5mCHq8Y",
-      "symbol": "ALTST",
-      "name": "ALTSETING Token",
-      "decimals": 9,
-      "logoURI": "logo.jpg",
-      "tags": [
-        "meme-token",
-        "community-token"
-      ],
-      "extensions": {
-        "website": "https://altseting-token.vercel.app/",
-        "twitter": "https://x.com/altsetingtoken?s=21",
-        "telegram": "https://t.me/ALTsetingtoken",
-        "discord": "https://discord.gg/Q7WDbfaj",
-        "description": "ALTSETING Token ($ALTST) is the memecoin of the ALTseason. Built on Solana, powered by SETI, META and the community miner WebApp."
-      }
-    }
-  ]
-}</pre>
-      <p>${t.tags}</p>
-    </body>
-    </html>
-  `);
-}
-</script>
-
-<!-- Button to open site in MetaMask browser -->
-<a href="https://metamask.app.link/dapp/YOUR_DOMAIN_HERE" target="_blank">
-  <button style="padding: 12px 18px; background-color: #ffce00; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 16px;">
-    🦊 Open in MetaMask to add ALTST
-  </button>
-</a>
-
-<!-- Warning text -->
-<p style="font-size: 14px; color: red; margin-top: 10px;">
-  ⚠️ To add ALTSETING Token (ALTST), please open this site in the <strong>MetaMask Browser</strong> on your phone. Tap the button above.
-</p>
-
-<!-- Button to add token (works only inside MetaMask browser) -->
-<button id="addALTST" style="margin-top: 20px; padding: 10px 20px; background-color: #ffce00; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
-  ➕ Add ALTST to wallet
-</button>
-
-<script>
-document.getElementById('addALTST').addEventListener('click', async () => {
-  if (!window.ethereum) {
-    alert("⚠️ Please open this site in the MetaMask browser to add the token.");
-    return;
-  }
-
-  try {
-    const wasAdded = await window.ethereum.request({
-      method: 'wallet_watchAsset',
-      params: {
-        type: 'ERC20',
-        options: {
-          address: '0x01f287740b49430A2eF92fad2058e31a38C1704C',
-          symbol: 'ALTST',
-          decimals: 18,
-          image: 'https://raw.githubusercontent.com/Vladislav01192007/ALTSETING-Token-logo/8efaf278d78ff006832663333c90490c51c3d4c6/logo.jpg',
-        },
-      },
-    });
-
-    if (wasAdded) {
-      alert('✅ ALTST successfully added!');
-    } else {
-      alert('❌ Token addition was rejected by the user.');
-    }
-  } catch (error) {
-    console.error(error);
-    alert('⚠️ Error adding the token.');
-  }
-});
-</script>
-  
-  <script>
-    const translations = {
-      uk: {
-        nftTitle: "🚀 ALTSETING NFT — більше ніж токен",
-        nftDescription: "ALTSETING NFT — це твій ключ до майбутнього. Отримай бонуси в Telegram-боті, знижки на фарм ALT, ексклюзивні права в комʼюніті.",
-        nftNote: "Колекціонування ще ніколи не було таким прибутковим. ALTSETING — це не просто NFT, це доступ до екосистеми майбутнього!",
-
-        subtitle: "Мем-токен з реальним майбутнім",
-        aboutTitle: "Про ALTSETING",
-        aboutText: "ALTSETING Token — це не просто ще один мем-токен. Це революційний проєкт, який поєднує гейміфікацію, NFT, Telegram-бота та криптовалюту в єдину екосистему. З нашою командою ви отримаєте новий досвід у світі Web3.",
-        whyTitle: "Чому саме ALTSETING?",
-        features: [
-          "🎮 Гейміфікований майнінг прямо у Telegram",
-          "🌐 Повна екосистема з WebApp, NFT та гаманцем",
-          "🚀 Справжнє комʼюніті, побудоване на взаємодії",
-          "💸 Винагороди за рефералів і активність"
-        ],
-        cta: "Приєднатись до руху"
-      },
-      en: {
-        nftTitle: "🚀 ALTSETING NFT — more than just a token",
-        nftDescription: "ALTSETING NFT is your key to the future. Get bonuses in the Telegram bot, discounts for farming ALT, and exclusive community perks.",
-        nftNote: "Collecting has never been this powerful. ALTSETING NFTs grant access to the ecosystem of the future!",
-
-        subtitle: "The meme token with real potential",
-        aboutTitle: "About ALTSETING",
-        aboutText: "ALTSETING Token is not just another meme token. It’s a revolutionary project combining gamification, NFTs, a Telegram bot, and cryptocurrency into one ecosystem. With our team, you’ll get a new experience in the Web3 world.",
-        whyTitle: "Why ALTSETING?",
-        features: [
-          "🎮 Gamified mining inside Telegram",
-          "🌐 Full ecosystem with WebApp, NFTs, and wallet",
-          "🚀 Real community based on interaction",
-          "💸 Rewards for referrals and activity"
-        ],
-        cta: "Join the movement"
-      },
-      pl: {
-        nftTitle: "🚀 ALTSETING NFT — więcej niż token",
-        nftDescription: "ALTSETING NFT to Twój klucz do przyszłości. Zyskaj bonusy w bocie Telegram, zniżki na farmienie ALT i wyjątkowe przywileje społecznościowe.",
-        nftNote: "Kolekcjonowanie nigdy nie było tak opłacalne. ALTSETING to dostęp do ekosystemu przyszłości!",
-
-        subtitle: "Token memiczny z prawdziwym potencjałem",
-        aboutTitle: "O ALTSETING",
-        aboutText: "ALTSETING Token to nie tylko kolejny token memiczny. To rewolucyjny projekt łączący gamifikację, NFT, bota Telegram i kryptowalutę w jednym ekosystemie. Z naszym zespołem otrzymasz nowe doświadczenie w świecie Web3.",
-        whyTitle: "Dlaczego ALTSETING?",
-        features: [
-          "🎮 Gamifikowane kopanie w Telegramie",
-          "🌐 Pełny ekosystem z WebApp, NFT i portfelem",
-          "🚀 Prawdziwa społeczność oparta na interakcji",
-          "💸 Nagrody za polecenia i aktywność"
-        ],
-        cta: "Dołącz do ruchu"
-      },
-      ru: {
-  nftTitle: "🚀 ALTSETING NFT — больше чем токен",
-  nftDescription: "ALTSETING NFT — твой ключ к будущему. Получи бонусы в Telegram-боте, скидки на фарм ALT и эксклюзивные права в сообществе.",
-  nftNote: "Коллекционирование ещё никогда не было таким выгодным. ALTSETING — это не просто NFT, это доступ к экосистеме будущего!",
-
-  subtitle: "Мем-токен с реальным будущим",
-  aboutTitle: "О ALTSETING",
-  aboutText: "ALTSETING Token — это не просто очередной мем-токен. Это революционный проект, объединяющий геймификацию, NFT, Telegram-бота и криптовалюту в одну экосистему. С нашей командой ты получишь новый опыт в мире Web3.",
-  whyTitle: "Почему именно ALTSETING?",
-  features: [
-    "🎮 Геймифицированный майнинг прямо в Telegram",
-    "🌐 Полная экосистема с WebApp, NFT и кошельком",
-    "🚀 Настоящее сообщество, построенное на взаимодействии",
-    "💸 Награды за рефералов и активность"
-  ],
-  cta: "Присоединиться к движению"
-    },
-
-    };
-
-    function setLang(lang) {
-      const t = translations[lang];
-      document.getElementById('subtitle').textContent = t.subtitle;
-      document.getElementById('about-title').textContent = t.aboutTitle;
-      document.getElementById('about-text').textContent = t.aboutText;
-      document.getElementById('why-title').textContent = t.whyTitle;
-      const featureList = document.getElementById('features');
-      featureList.innerHTML = '';
-      t.features.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        featureList.appendChild(li);
-      });
-      document.getElementById('cta-button').textContent = t.cta;
-      document.getElementById('nft-title').textContent = t.nftTitle;
-      document.getElementById('nft-description').textContent = t.nftDescription;
-      document.getElementById('nft-note').textContent = t.nftNote;
-
-    }
-
-    window.addEventListener("load", () => {
-      document.getElementById("preloader").style.display = "none";
-    });
-  </script>
-  <script src="script.js"></script>
+  <h1 class="krapka">.</h1>
 </body>
 </html>
 
