@@ -1,141 +1,400 @@
+/* ================= ROOT ================= */
 :root {
   --bg: #0b0b0f;
+  --bg-soft: #111118;
   --accent: #ff8c00;
+  --accent-glow: rgba(255, 140, 0, 0.6);
   --text: #ffffff;
-  --muted: #b0b0b0;
+  --muted: #a9a9b3;
+  --glass: rgba(255, 255, 255, 0.05);
 }
 
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  background: var(--bg);
+  background: radial-gradient(circle at top, #120900, var(--bg));
   color: var(--text);
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
-/* HERO */
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent), #ffb347);
+  border-radius: 10px;
+}
+
+/* ================= HERO ================= */
 .hero {
   min-height: 100vh;
-  background: radial-gradient(circle at top, #ff8c0022, transparent),
-              linear-gradient(180deg, #000, #0b0b0f);
+  position: relative;
+  background:
+    radial-gradient(circle at 20% 10%, #ff8c0030, transparent 40%),
+    radial-gradient(circle at 80% 30%, #ff8c0020, transparent 45%),
+    linear-gradient(180deg, #000, #0b0b0f);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
+}
+
+/* floating glow orbs */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: var(--accent);
+  filter: blur(120px);
+  opacity: 0.25;
+  animation: float 12s infinite alternate ease-in-out;
+}
+
+.hero::after {
+  right: -100px;
+  bottom: -100px;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-80px) translateX(40px); }
 }
 
 .hero h1 {
-  font-family: Orbitron;
-  font-size: 52px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 56px;
+  letter-spacing: 2px;
   margin-bottom: 20px;
+  animation: fadeUp 1.2s ease forwards;
+  text-shadow: 0 0 25px var(--accent-glow);
 }
 
 .hero p {
-  max-width: 600px;
-  margin: 0 auto 30px;
+  max-width: 620px;
+  margin: 0 auto 35px;
   color: var(--muted);
+  animation: fadeUp 1.5s ease forwards;
 }
 
+/* ================= BUTTON ================= */
 .hero-btn {
-  padding: 14px 32px;
-  background: var(--accent);
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, var(--accent), #ffb347);
   color: #000;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 40px var(--accent-glow);
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
-/* SECTIONS */
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: translateX(-100%);
+}
+
+.hero-btn:hover::before {
+  animation: shine 1.2s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 70px var(--accent-glow);
+}
+
+@keyframes shine {
+  to { transform: translateX(100%); }
+}
+
+/* ================= SECTIONS ================= */
 .section {
-  padding: 80px 20px;
+  padding: 100px 20px;
   max-width: 1200px;
   margin: auto;
+  position: relative;
 }
 
 .section.dark {
-  background: #060608;
+  background: linear-gradient(180deg, #07070a, #050507);
 }
 
+/* ================= HEADERS ================= */
 h2 {
-  font-family: Orbitron;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 38px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  position: relative;
 }
 
-/* CARDS */
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--accent);
+  margin: 16px auto 0;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* ================= CARDS ================= */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  gap: 28px;
 }
 
 .card {
-  background: #121218;
-  border-radius: 20px;
-  padding: 30px;
+  background: linear-gradient(180deg, #15151f, #0f0f16);
+  border-radius: 22px;
+  padding: 34px;
   border: 1px solid #222;
+  position: relative;
+  transition: transform .4s ease, box-shadow .4s ease;
+  overflow: hidden;
 }
 
-/* BENEFITS */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,140,0,0.15), transparent);
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation: shine 1.5s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* ================= BENEFITS ================= */
 .benefits {
   list-style: none;
-  max-width: 700px;
+  max-width: 720px;
   margin: auto;
-  padding: 0;
 }
 
 .benefits li {
-  padding: 14px 0;
+  padding: 18px 0;
   border-bottom: 1px solid #222;
+  position: relative;
+  padding-left: 36px;
 }
 
-/* STEPS */
+.benefits li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* ================= STEPS ================= */
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
 
 .step {
-  background: #111;
-  padding: 24px;
-  border-radius: 16px;
+  background: var(--bg-soft);
+  padding: 28px;
+  border-radius: 18px;
   text-align: center;
+  transition: transform .3s ease;
 }
 
-/* FORM */
+.step:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= FORM ================= */
 .partner-form {
-  max-width: 500px;
+  max-width: 520px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .partner-form input,
 .partner-form textarea {
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
-  background: #1a1a22;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #222;
+  background: #12121a;
   color: #fff;
+  transition: border .3s ease, box-shadow .3s ease;
+}
+
+.partner-form input:focus,
+.partner-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 .partner-form button {
-  padding: 14px;
-  border-radius: 20px;
+  padding: 16px;
+  border-radius: 30px;
   border: none;
-  background: var(--accent);
-  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), #ffb347);
+  font-weight: 800;
   cursor: pointer;
+  box-shadow: 0 0 35px var(--accent-glow);
+  transition: transform .3s ease;
 }
 
-/* FOOTER */
+.partner-form button:hover {
+  transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
 footer {
-  padding: 30px;
+  padding: 40px;
   text-align: center;
   color: var(--muted);
+  background: #050507;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    margin-bottom: 26px;
+  }
+
+  .hero::before,
+  .hero::after {
+    width: 200px;
+    height: 200px;
+    filter: blur(90px);
+    opacity: 0.18;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 60px 16px;
+  }
+
+  h2 {
+    font-size: 26px;
+    margin-bottom: 36px;
+  }
+
+  /* CARDS */
+  .cards {
+    gap: 18px;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  /* BENEFITS */
+  .benefits li {
+    font-size: 14px;
+    padding-left: 30px;
+  }
+
+  /* STEPS */
+  .step {
+    padding: 22px;
+  }
+
+  /* FORM */
+  .partner-form {
+    width: 100%;
+  }
+
+  .partner-form input,
+  .partner-form textarea {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .partner-form button {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 26px 16px;
+    font-size: 13px;
+  }
+}
+
+/* ================= SMALL PHONES ================= */
+@media (max-width: 420px) {
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    padding: 14px 0;
+  }
 }
