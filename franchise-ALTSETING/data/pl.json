@@ -1,0 +1,164 @@
+{
+  "site": {
+    "tagline": "Franczyza",
+    "nav": {
+      "home": "Przegląd",
+      "model": "Model",
+      "terms": "Warunki",
+      "governance": "Zarządzanie",
+      "revenue": "Przychody",
+      "about": "O nas",
+      "apply": "Aplikuj"
+    },
+    "footer": {
+      "legal": "Informacja prawna",
+      "privacy": "Polityka prywatności",
+      "copyright": "ALTSETING ©"
+    }
+  },
+  "hero": {
+    "title": "Demokratyczny model franczyzy wspólnej własności",
+    "subtitle": "10, 15 lub 20 partnerów. Jeden biznes. Wspólna kontrola. Wspólny zysk.",
+    "ctaPrimary": "Zobacz model",
+    "ctaSecondary": "Dołącz"
+  },
+  "concept": {
+    "label": "Przegląd koncepcji",
+    "title": "Kooperacyjna architektura franczyzy",
+    "text": "ALTSETING wprowadza model franczyzowy, w którym partnerzy wspólnie tworzą, zarządzają i czerpią zyski z jednego podmiotu biznesowego w strukturze demokratycznej.",
+    "diagram": {
+      "left": "Partnerzy",
+      "center": "Kooperatywa",
+      "right": "Biznes"
+    }
+  },
+  "preview": {
+    "label": "Jak to działa",
+    "title": "Podgląd infografiki",
+    "text": "Poznaj pełny przepływ operacyjny i logikę zarządzania na dedykowanej stronie infografiki.",
+    "button": "Otwórz infografikę"
+  },
+  "why": {
+    "label": "Dlaczego to działa",
+    "title": "Struktura, która łączy wszystkich",
+    "items": [
+      "Zredukowane ryzyko indywidualne",
+      "Wspólne podejmowanie decyzji",
+      "Pełna przejrzystość",
+      "Profesjonalny nadzór ALTSETING"
+    ]
+  },
+  "cta": {
+    "label": "Następny krok",
+    "title": "Złóż wniosek",
+    "text": "Prześlij zgłoszenie, aby dołączyć do kolejnej grupy partnerów.",
+    "button": "Złóż wniosek"
+  },
+  "infographic": {
+    "label": "Model kluczowy",
+    "title": "Pełna infografika",
+    "subtitle": "Wizualne przejście przez cały system franczyzowy.",
+    "steps": [
+      {
+        "title": "Krok 1 — Formowanie grupy",
+        "text": "Stała liczba partnerów tworzy grupę franczyzową.",
+        "icon": "group"
+      },
+      {
+        "title": "Krok 2 — Wkład kapitałowy",
+        "text": "Każdy uczestnik wnosi równą, stałą inwestycję.",
+        "icon": "capital"
+      },
+      {
+        "title": "Krok 3 — Utworzenie kooperatywy",
+        "text": "Powstaje prawnie ustanowiony podmiot kooperatywny.",
+        "icon": "legal"
+      },
+      {
+        "title": "Krok 4 — ALTSETING jako przewodniczący",
+        "text": "ALTSETING pełni rolę nadzorczą, zapewniając strukturę, legalność i zgodność strategiczną.",
+        "icon": "chair"
+      },
+      {
+        "title": "Krok 5 — Zarządzanie demokratyczne",
+        "text": "Każdy partner ma jeden głos. Kluczowe decyzje zapadają wspólnie.",
+        "icon": "vote"
+      },
+      {
+        "title": "Krok 6 — Operacje biznesowe",
+        "text": "Biznes działa w oparciu o wspólne zarządzanie i zdefiniowane role.",
+        "icon": "operations"
+      },
+      {
+        "title": "Krok 7 — Podział zysków",
+        "text": "Zysk netto jest dzielony między partnerów zgodnie z umową.",
+        "icon": "profit"
+      }
+    ]
+  },
+  "terms": {
+    "label": "Warunki uczestnictwa",
+    "title": "Kluczowe warunki",
+    "intro": "Jasne i przejrzyste zasady dla każdego partnera.",
+    "items": [
+      "Liczba uczestników: 10 / 15 / 20",
+      "Kwota inwestycji: określana dla każdej franczyzy",
+      "Prawa głosu: jeden partner, jeden głos",
+      "Zasady wyjścia: uporządkowana polityka wykupu i transferu",
+      "Przejrzystość prawna wszystkich umów"
+    ]
+  },
+  "governance": {
+    "label": "Zarządzanie",
+    "title": "Model zarządzania",
+    "intro": "Model zarządzania oparty na zaufaniu, odpowiedzialności i audycie.",
+    "items": [
+      "Równe głosy dla każdego partnera",
+      "Cykliczne raportowanie finansowe",
+      "Niezależny audyt",
+      "Nadzór ALTSETING nad zgodnością"
+    ]
+  },
+  "revenue": {
+    "label": "Przychody",
+    "title": "Przychody i dystrybucja",
+    "intro": "Rentowność jest zgodna ze stabilnością i reinwestycją.",
+    "items": [
+      "Określone źródła przychodów",
+      "Transparentna logika podziału",
+      "Polityka reinwestycji i rezerw",
+      "Prognozy scenariuszowe"
+    ]
+  },
+  "about": {
+    "label": "O ALTSETING",
+    "title": "Rola ALTSETING",
+    "intro": "ALTSETING zapewnia strategiczny, prawny i operacyjny nadzór nad siecią franczyz.",
+    "items": [
+      "Strategiczna odpowiedzialność i zarządzanie",
+      "Obecność prawna i zgodność",
+      "Standardy operacyjne",
+      "Długoterminowa spójność ekosystemu"
+    ]
+  },
+  "apply": {
+    "label": "Aplikuj",
+    "title": "Formularz zgłoszeniowy",
+    "intro": "Prześlij zgłoszenie do grupy partnerów franczyzowych.",
+    "fields": {
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "country": "Kraj",
+      "group": "Preferowana wielkość grupy",
+      "message": "Wiadomość"
+    },
+    "placeholders": {
+      "name": "Jan Kowalski",
+      "email": "name@email.com",
+      "country": "Kraj zamieszkania",
+      "message": "Opisz swoje doświadczenie i cele"
+    },
+    "groupOptions": ["10 partnerów", "15 partnerów", "20 partnerów"],
+    "button": "Wyślij zgłoszenie"
+  }
+}
