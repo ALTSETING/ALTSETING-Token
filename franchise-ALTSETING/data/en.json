@@ -1,0 +1,164 @@
+{
+  "site": {
+    "tagline": "Franchise Program",
+    "nav": {
+      "home": "Overview",
+      "model": "Model",
+      "terms": "Terms",
+      "governance": "Governance",
+      "revenue": "Revenue",
+      "about": "About",
+      "apply": "Apply"
+    },
+    "footer": {
+      "legal": "Legal notice",
+      "privacy": "Privacy policy",
+      "copyright": "ALTSETING ©"
+    }
+  },
+  "hero": {
+    "title": "Democratic Franchise Model for Collective Ownership",
+    "subtitle": "10, 15 or 20 partners. One business. Shared control. Shared profit.",
+    "ctaPrimary": "View Model",
+    "ctaSecondary": "Join Franchise"
+  },
+  "concept": {
+    "label": "Concept Overview",
+    "title": "Cooperative Franchise Architecture",
+    "text": "ALTSETING introduces a franchise model where partners jointly create, manage, and profit from a single business entity under a democratic structure.",
+    "diagram": {
+      "left": "Partners",
+      "center": "Cooperative",
+      "right": "Business"
+    }
+  },
+  "preview": {
+    "label": "How It Works",
+    "title": "Infographic Preview",
+    "text": "Explore the full operational flow and governance logic in the dedicated infographic page.",
+    "button": "Open Full Infographic"
+  },
+  "why": {
+    "label": "Why This Model Works",
+    "title": "Structure that Aligns Everyone",
+    "items": [
+      "Reduced individual risk",
+      "Collective decision-making",
+      "Full transparency",
+      "Professional governance by ALTSETING"
+    ]
+  },
+  "cta": {
+    "label": "Next Step",
+    "title": "Apply to Participate",
+    "text": "Submit your interest to join the next franchise group formation cycle.",
+    "button": "Apply to Participate"
+  },
+  "infographic": {
+    "label": "Core Model",
+    "title": "Full Infographic",
+    "subtitle": "A visual walkthrough of the complete franchise system.",
+    "steps": [
+      {
+        "title": "Step 1 — Group Formation",
+        "text": "A fixed number of partners form a franchise group.",
+        "icon": "group"
+      },
+      {
+        "title": "Step 2 — Capital Contribution",
+        "text": "Each participant contributes an equal fixed investment.",
+        "icon": "capital"
+      },
+      {
+        "title": "Step 3 — Cooperative Entity Creation",
+        "text": "A cooperative entity is legally formed.",
+        "icon": "legal"
+      },
+      {
+        "title": "Step 4 — ALTSETING as Chairman",
+        "text": "ALTSETING acts as the governing head, ensuring structure, legality, and strategic alignment.",
+        "icon": "chair"
+      },
+      {
+        "title": "Step 5 — Democratic Management",
+        "text": "Each partner has one vote. Key decisions are made collectively.",
+        "icon": "vote"
+      },
+      {
+        "title": "Step 6 — Business Operations",
+        "text": "The business operates under shared management and predefined roles.",
+        "icon": "operations"
+      },
+      {
+        "title": "Step 7 — Profit Distribution",
+        "text": "Net profit is distributed among partners according to the agreement.",
+        "icon": "profit"
+      }
+    ]
+  },
+  "terms": {
+    "label": "Participation Terms",
+    "title": "Key Participation Terms",
+    "intro": "Clear, transparent participation rules for every partner.",
+    "items": [
+      "Number of participants: 10 / 15 / 20",
+      "Investment amount: defined per franchise",
+      "Voting rights: one partner, one vote",
+      "Exit rules: structured buy-out and transfer policy",
+      "Legal transparency across all agreements"
+    ]
+  },
+  "governance": {
+    "label": "Governance & Control",
+    "title": "Governance Model",
+    "intro": "A governance framework designed for trust, accountability, and auditability.",
+    "items": [
+      "Equal voting rights for every partner",
+      "Scheduled financial reporting",
+      "Independent audit procedures",
+      "ALTSETING oversight for compliance"
+    ]
+  },
+  "revenue": {
+    "label": "Revenue & Profit",
+    "title": "Revenue & Distribution",
+    "intro": "Profitability is aligned with sustainability and reinvestment goals.",
+    "items": [
+      "Defined revenue sources per franchise",
+      "Transparent distribution logic",
+      "Reinvestment and reserve policy",
+      "Scenario-based forecasting"
+    ]
+  },
+  "about": {
+    "label": "About ALTSETING",
+    "title": "ALTSETING Role",
+    "intro": "ALTSETING provides strategic, legal, and operational supervision across the franchise network.",
+    "items": [
+      "Strategic responsibility and governance",
+      "Legal presence and compliance",
+      "Operational standards",
+      "Long-term ecosystem alignment"
+    ]
+  },
+  "apply": {
+    "label": "Apply",
+    "title": "Application Form",
+    "intro": "Submit your application to join the franchise partner group.",
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "country": "Country",
+      "group": "Preferred group size",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "John Smith",
+      "email": "name@email.com",
+      "country": "Country of residence",
+      "message": "Tell us about your background and goals"
+    },
+    "groupOptions": ["10 partners", "15 partners", "20 partners"],
+    "button": "Submit Application"
+  }
+}
