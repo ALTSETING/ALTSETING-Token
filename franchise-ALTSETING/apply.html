@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALTSETING Application</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <strong>ALTSETING</strong>
+        <span data-i18n="site.tagline">Franchise Program</span>
+      </div>
+      <nav class="main-nav">
+        <a href="/franchise-ALTSETING/franchise.html" data-i18n="site.nav.home">Overview</a>
+        <a href="/franchise-ALTSETING/model.html" data-i18n="site.nav.model">Model</a>
+        <a href="/franchise-ALTSETING/terms.html" data-i18n="site.nav.terms">Terms</a>
+        <a href="/franchise-ALTSETING/governance.html" data-i18n="site.nav.governance">Governance</a>
+        <a href="/franchise-ALTSETING/revenue.html" data-i18n="site.nav.revenue">Revenue</a>
+        <a href="/franchise-ALTSETING/about.html" data-i18n="site.nav.about">About</a>
+        <a href="/franchise-ALTSETING/apply.html" data-i18n="site.nav.apply">Apply</a>
+      </nav>
+      <div class="language-switcher" aria-label="Language switcher">
+        <button type="button" data-lang="EN">🇬🇧 EN</button>
+        <button type="button" data-lang="UA">🇺🇦 UA</button>
+        <button type="button" data-lang="PL">🇵🇱 PL</button>
+        <button type="button" data-lang="RU">🇷🇺 RU</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title" data-i18n="apply.label">Apply</div>
+        <h2 data-i18n="apply.title">Application Form</h2>
+        <p data-i18n="apply.intro">Submit your application to join the franchise partner group.</p>
+        <form class="form-grid" action="#" method="post">
+          <label class="form-field">
+            <span data-i18n="apply.fields.name">Full name</span>
+            <input type="text" name="full_name" data-i18n-placeholder="apply.placeholders.name" required />
+          </label>
+          <label class="form-field">
+            <span data-i18n="apply.fields.email">Email</span>
+            <input type="email" name="email" data-i18n-placeholder="apply.placeholders.email" required />
+          </label>
+          <label class="form-field">
+            <span data-i18n="apply.fields.country">Country</span>
+            <input type="text" name="country" data-i18n-placeholder="apply.placeholders.country" required />
+          </label>
+          <label class="form-field">
+            <span data-i18n="apply.fields.group">Preferred group size</span>
+            <select name="group_size" data-i18n-options="apply.groupOptions" required></select>
+          </label>
+          <label class="form-field" style="grid-column: 1 / -1;">
+            <span data-i18n="apply.fields.message">Message</span>
+            <textarea name="message" data-i18n-placeholder="apply.placeholders.message"></textarea>
+          </label>
+          <div style="grid-column: 1 / -1;">
+            <button class="button primary" type="submit" data-i18n="apply.button">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-links">
+        <span data-i18n="site.footer.legal">Legal notice</span>
+        <span data-i18n="site.footer.privacy">Privacy policy</span>
+      </div>
+      <div class="language-switcher" aria-label="Language switcher">
+        <button type="button" data-lang="EN">🇬🇧 EN</button>
+        <button type="button" data-lang="UA">🇺🇦 UA</button>
+        <button type="button" data-lang="PL">🇵🇱 PL</button>
+        <button type="button" data-lang="RU">🇷🇺 RU</button>
+      </div>
+      <div>
+        <span data-i18n="site.footer.copyright">ALTSETING ©</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
