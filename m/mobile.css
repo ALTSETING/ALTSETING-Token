@@ -568,7 +568,7 @@ body {
 
 
 .hero-card {
-    margin-left: 20px;
+    margin: 0 auto;
     position: relative;
     width: 270px;
     height: 300px;
@@ -705,10 +705,10 @@ body {
 
 
 .rabbit-btn {
-    
     display: inline-flex;
     align-items: center;
-    margin-left: 33px;
+    justify-content: center;
+    margin: 10px auto 50px;
     margin-top: 10px;
     gap: 0px;
     padding: 6px 12px;
@@ -719,7 +719,6 @@ body {
     color: #ffffff;
     text-decoration: none;
     transition: 0.3s;
-    margin-bottom: 50px;
 }
 
 .rabbit-btn img {
@@ -789,7 +788,7 @@ body {
     font-size: 48px;
     margin-bottom: 20px;
     margin-top: 20px;
-    margin-left: 11px;
+    margin-left: 0;
 }
 
 .subtitle {
@@ -798,20 +797,20 @@ body {
     color: #bdbdbd;
     max-width: 480px;
     margin-bottom: 30px;
-    margin-left: 11px;
+    margin-left: 0;
 }
 
 .wallet-btn {
-    display: inline-block;
+    display: block;
     background: linear-gradient(135deg, #ff8a00, #ffb347);
     padding: 12px 15px;
     border-radius: 12px;
     color: #000;
     font-weight: 600;
     text-decoration: none;
-    margin-bottom: 80px;
+    margin: 0 auto 56px;
     font-size: 30px;
-    margin-left: 61px;
+    width: fit-content;
 }
 
 .description-setwallet {
@@ -820,14 +819,15 @@ body {
     line-height: 1.5;
     color: #cfd8dc;
     padding: 15px;
+    margin: 0 auto;
     
 }
 
 .wallet-image {
-  margin-left: 11px;
+  margin-left: 0;
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .wallet-image img {
@@ -1064,14 +1064,11 @@ body {
 
 .socials-bar {
   display: flex;
-    margin-left: 13px;
+    margin: 40px auto 0;
     flex-direction: column;
-    
-    
     gap: 18px;
-
-    padding: 20px 100px;
-    margin-top: 40px;
+    width: min(92%, 360px);
+    padding: 20px 0;
 
     color: #8fa3b8;
 }
@@ -1093,8 +1090,9 @@ body {
 
 
 .social-btn {
-    
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 5px;
     border-radius: 14px;
     
@@ -1159,11 +1157,57 @@ body {
 }
 
 .Docs {
-  margin-left: 32%;
+  width: min(92%, 360px);
+  margin: 0 auto 100px;
   display: flex;
   flex-direction: column;   /* 🔥 ОЦЕ ГОЛОВНЕ */
   gap: 14px;
-  margin-bottom: 100px;
+}
+
+.settable-section{
+  padding: 20px 0 10px;
+}
+
+.settable-content{
+  width: min(94%, 420px);
+  margin: 0 auto;
+}
+
+.settable-text h2{
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 44px;
+  text-align: center;
+}
+
+.settable-subtitle{
+  margin: 0 0 18px;
+  color: #bdbdbd;
+  font-size: 18px;
+  text-align: center;
+}
+
+.settable-description{
+  margin: 0 auto;
+  color: #cfd8dc;
+  font-size: 16px;
+  line-height: 1.55;
+  padding: 0 10px;
+}
+
+.settable-image{
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.settable-image img{
+  width: min(100%, 400px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 141, 60, 0.38);
+  box-shadow:
+    0 0 28px rgba(255, 140, 0, 0.24),
+    inset 0 0 8px rgba(255, 180, 90, 0.08);
 }
 
 .Docs-text {
